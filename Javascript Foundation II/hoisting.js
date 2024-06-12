@@ -82,3 +82,48 @@ function sing() {
 // Something that is quite unique in Javascript where we see the function or the var keywords
 // as the first items on the line , we allocate space for them on our heap to make sure that the
 // javascript engine is ready for the execution.
+
+//    ------------  EXERCISES  --------------
+
+var one = 1;
+var one = 2;
+console.log(one); // here the answer is 2, because during the axecution phase the very last line
+// was to assign 2 to one.
+
+// what will happen during hoisting? well it will look like this.
+
+one = undefined;
+var one = 1;
+var one = 2; // When the javascript sees the var keyword and the same variable assigned to it,
+// it's actually going to ignore this line. cze it already saw the same variable.
+console.log(one);
+
+// -- USING FUNCTION --
+
+// What will happen by the following function?
+
+//a();
+function a() {
+  console.log("hi");
+}
+
+function a() {
+  console.log("bye");
+}
+
+a();
+
+/* The same when a() is called under*/
+
+// The answer will be ' bye'
+
+// P.S: During the hoisting phase the compiler will look the first function and hoist it
+// then put this in memory heap.
+
+// It keeps going and find another function a again. then it says I'm going to put this in the memory
+// and because these functions are the same and it is going to rewrite that place in memory to iclude
+// console.log('bye);
+// now the ability to call hi lost and call the second function.
+
+// => Up untill now we talked about the global execution context that has the creation phase and the execution phase.
+// => Any time we call a function, there a creation phase and the execution phase where there is hoisting involved.
