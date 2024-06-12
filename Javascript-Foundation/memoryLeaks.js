@@ -6,7 +6,6 @@ for (let i = 5; i > 1; i++) {
 }
 
 // 3 Types of memory leak to avoid
-
 // the very first one is: 1. Global variable
 
 var a = 1;
@@ -20,7 +19,7 @@ element.addEventListener("click", onclick);
 
 // When you forget to delete this event listeners, because they run in the background
 // many times and they are in memory, they can cause a memory leak.
-// this happens when ehen you back and forthbetween single page applications where you're not removing
+// this happens when you back and forth between single page applications where you're not removing
 // the event listeners off the page and as a user goes back and forth
 // the memory keeps increasing more and more as  more event listeners are added.
 

@@ -1,5 +1,5 @@
 // How to emplement WEB API,
-// In fact javascript is not part of javascript, when a call back queue sees
+// In fact javascript runtime is not part of javascript, when a call back queue sees
 // something that is asynchronous it calls the WEB API to take action.
 
 console.log("1");

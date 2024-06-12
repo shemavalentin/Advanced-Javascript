@@ -32,11 +32,11 @@ saying hey, here's the Javascript file for you, you just start to read for me.
 It is the Global execution context that gets poped off the stack the last.
 anytime we run a javascript code it's always going to be part of a global execution context.
 
-=> The global execution context is made of: Global object and the (this) Key word
+=> The global execution context is made of: Global object and the (this) Key word used to reference the window object in the browser.
 the javascript engine is going to create the two objects: GLOBAL OBJECT and THIS.
 GLOBAL OBJECT = THIS (object)
 
-=> In NodeJS the global object is called GLOBAL whether to be window like in Javascript.
+=> In NodeJS the global object is called GLOBAL whether to be (window) like in Javascript.
 
 ==> we can assign variables to this objects 
 

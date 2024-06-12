@@ -20,7 +20,7 @@ function printName() {
 
 function findName() {
   function a() {
-    // This function is lexically insidr the find my name world.
+    // This function is lexically inside the findName world.
     // because this way, the compiler knowing where this function is written can decide
     // and make decisions as to where to put things and what action to take. and what
     // it can access in this world
@@ -31,7 +31,6 @@ function findName() {
 function sayMyName() {
   return findName();
 }
-
 window.sayMyName();
 
 /* 
@@ -40,9 +39,7 @@ window.sayMyName();
 we can do different things, have different information. and latter on they can communicate one each other.
 * 
 
-
-
 P.S: In javascript our lexical scope (available data + variables where the function was defined)
-determines our available variables. Not whete the function id called(dynamic scope).
+determines our available variables. Not where the function is called(dynamic scope).
 
 */
