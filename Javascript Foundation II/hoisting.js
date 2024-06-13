@@ -120,7 +120,7 @@ a();
 // P.S: During the hoisting phase the compiler will look the first function and hoist it
 // then put this in memory heap.
 
-// It keeps going and find another function a again. then it says I'm going to put this in the memory
+// It keeps going and find another function again. then it says I'm going to put this in the memory
 // and because these functions are the same and it is going to rewrite that place in memory to iclude
 // console.log('bye);
 // now the ability to call hi lost and call the second function.
