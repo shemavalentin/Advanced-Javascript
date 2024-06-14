@@ -23,5 +23,5 @@ var heyhey = function doodle() {
 heyhey(); // this will return 'heyhey'
 
 // but when you call
-doodle(); // this will error out because function doodle is not accessible on the execution variable
+doodle(); // this will error out because function doodle is not accessible on the global execution variable
 // environment. this is wierd too.  it is only accessed onside it's scope.
