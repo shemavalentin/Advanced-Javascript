@@ -97,3 +97,74 @@ const wizardArcher = wizard1.heal.bind(archer1, 100, 30);
 wizardArcher();
 
 console.log("2", archer1);
+
+// exercise====================>
+
+// const array = [1,2,3];
+
+// function getMaxNumber(arr){
+//   //code here
+// }
+
+// getMaxNumber(array) // should return 3
+
+const array = [1, 2, 3];
+
+function getMaxNumber(arr) {
+  return Math.max.apply(null, arr);
+}
+
+console.log(getMaxNumber(array));
+
+//==========================
+
+var b = {
+  name: "Jay",
+  say() {
+    console.log(this);
+  },
+};
+
+var c = {
+  name: "Jay",
+  say() {
+    return function () {
+      console.log(this);
+    };
+  },
+};
+
+var d = {
+  name: "Jay",
+  say() {
+    return () => console.log(this);
+  },
+};
+
+d.say(); // here it will return a function. but when we call it twice:
+d.say()(); // this keyword will be lexically scoped inside the function due to arrwo function.
+
+// == HOW TO SOLVE THIS ISSUE--
+
+const character = {
+  name: "Simon",
+  getCharacter() {
+    return this.name;
+  },
+};
+const giveMeTheCharacterNOW = character.getCharacter;
+
+//How Would you fix this?
+console.log("?", giveMeTheCharacterNOW()); //this should return 'Simon' bud doesn't
+
+// Answer
+
+const character1 = {
+  name: "Simon",
+  getCharacter() {
+    return this.name;
+  },
+};
+const giveMeTheCharacterNOWo = character.getCharacter.bind(character); //here we used the bind method to bind to obj charactor
+
+console.log("?", giveMeTheCharacterNOW());
