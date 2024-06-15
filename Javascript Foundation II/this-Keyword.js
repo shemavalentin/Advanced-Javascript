@@ -112,3 +112,116 @@ obj2.importantPerson();
 
 // this keyword is like asking 'who called me'
 // and it heps us to clean up our codes.
+
+/* Advanced exercise*/
+
+const a = function () {
+  console.log("a", this);
+  const b = function () {
+    console.log("b", this);
+    const c = {
+      hi: function () {
+        console.log("c", this);
+      },
+    };
+    c.hi();
+  };
+  b();
+};
+a();
+
+// it will result the following:
+/*
+a Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+b Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+c {hi: ƒ}*/
+
+/*
+=> a() function is pointing to the wondows object. no other some other thing to the left of the 
+dot
+=> a() function executed b inside of it. a(b());
+
+=> hi() function a property of c object. to mean, left of the dot when using this keyword
+there will be c.  : c.hi();
+*/
+
+// =========================================
+
+// another example
+
+const ob = {
+  name: "Billy",
+  sing() {
+    console.log("a", this);
+    var anotherFunc = function () {
+      console.log("b", this);
+    };
+    anotherFunc(); // was called inside the sing function. object did not really call this function.
+
+    // because this function was not called by the ob means it is not it's property.
+    // In Javascript, this keyword defaults to window object.
+  },
+};
+
+/* Now the result 
+ob.sing();
+a {name: 'Billy', sing: ƒ}
+b Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+every thing in javascript is lexically scoped. => how you write it determines
+what we have available, except this keyword.
+
+the this keyword is actually dynamcally scoped
+that is, it doesn't matter where it is written, it matters how the function was called.
+*/
+
+/* Now to solve the pitfall there are two possible ways, let's look */
+
+// 1. using arrow function
+const object = {
+  name: "Billy",
+  sing() {
+    console.log("a", this);
+    var anotherFunc = () => {
+      // now the pitfall solved by using arrow function in ES6. THIS is not refering now
+      // to windows object.
+      console.log("b", this);
+    };
+    anotherFunc();
+  },
+};
+
+object.sing();
+
+// by using bind();
+
+const objec = {
+  name: "Billy",
+  sing() {
+    console.log("a", this);
+    var anotherFunc = function () {
+      console.log("b", this);
+    };
+    return anotherFunc.bind(this);
+  },
+};
+
+object.sing()(); // here I called the function twice and the returned function is
+// binded to the objec object so that this keyword does not refer to window object
+// but on the current object. this was used before ES6.
+
+/* OR USING self method. this was used in JQuery and the first version of the Angular */
+
+const obje1 = {
+  name: "Billy",
+  sing() {
+    console.log("a", this);
+    var self = this;
+    var anotherFunc = function () {
+      console.log(self);
+    };
+    return anotherFunc;
+  },
+};
+
+object.sing()();
