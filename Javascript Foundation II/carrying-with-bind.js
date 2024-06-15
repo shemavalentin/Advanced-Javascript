@@ -1,5 +1,6 @@
 function multiply(a, b) {
-  return a * b;
+  //  passed parameter
+  return a * b; // retuned product after partially declaration of one (a) parameter
 }
 
 let multiplyByTwo = multiply.bind(this, 2); // partially given 2
