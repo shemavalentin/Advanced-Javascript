@@ -1,3 +1,4 @@
+"use strict";
 function weird() {
   height = 50; // Here javascript is creating the variable environment, it doesn't know
   // what is height. height is not declared in the weired function because there is no var, let, or const.

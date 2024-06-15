@@ -13,3 +13,6 @@
 function () { } ();  // this will error out telling that there is a synthax error
 // you can't really call a function declaration immendiately
 
+(function () { 
+    // all what is written here will be accessed inside here.
+})();
