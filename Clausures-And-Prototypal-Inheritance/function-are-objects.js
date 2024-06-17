@@ -51,4 +51,5 @@ It has some properties like call(), apply(), bind()
 Why is this important? 
 
 Because function can stored as data, move them arround, they can be passed arround like data.
+not just perform some operations for us.
 */
