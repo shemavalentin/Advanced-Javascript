@@ -40,7 +40,7 @@ const four1 = new Function("num", "return num");
 four();
 
 /*
-Objects can not be called as functions do. we can't use the buid in method like
+Objects can not be called as functions do. we can't use the buit in method like
 .call(), .bind(), .appy() or use some properties like name, ... 
 
 functions are objects and are special type of object that is a callable objects

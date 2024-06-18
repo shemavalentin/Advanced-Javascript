@@ -55,7 +55,7 @@ const archer1 = {
 // how to do this??
 console.log("1", archer1);
 wizard1.heal.call(archer1, 50, 30); // here call() keeps taking parameters, paramether
-wizard1.heal.apply(archer1, 50, 30); // here call() takes array of parameters. that's the only difference.
+wizard1.heal.apply(archer1, [50, 30]); // here call() takes array of parameters. that's the only difference.
 console.log("2", archer1);
 
 // the choice of what to use will depend on if you need to pass a list of paramenter
@@ -70,7 +70,6 @@ with a certain parameters. it is usually used when we want a function to be call
 on with a certain type of context or certain type of this keyword.
 
 */
-
 const wizard2 = {
   name: "Merlin",
   health: 50,
@@ -158,7 +157,6 @@ const giveMeTheCharacterNOW = character.getCharacter;
 console.log("?", giveMeTheCharacterNOW()); //this should return 'Simon' bud doesn't
 
 // Answer
-
 const character1 = {
   name: "Simon",
   getCharacter() {

@@ -38,7 +38,7 @@ that points to the other object's location in memory heap and all get changed.
 
 var c = [1, 2, 3, 4, 5];
 var d = [].concat(c); // when we don't need to modify the c object.
-//d = c; // here bith objects are pointing to the same location and we save memory
+//d = c; // here both objects are pointing to the same location and we save memory
 d.push(123712378327812787812);
 console.log(d);
 console.log(c);
