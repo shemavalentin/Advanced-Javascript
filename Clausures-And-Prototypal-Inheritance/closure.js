@@ -41,12 +41,24 @@ const closure = (grandma) => (mother) => (daughter) => {
   return `${grandma} > ${mother} > ${daughter}`;
 };
 
-closure("therese")("Gahongayire")("Rugina");
+//closure("therese")("Gahongayire")("Rugina");
+
+// grandma > mother > daughter
 
 const booString = closure("Therese");
 booString();
 // after 5 years
-const booStirngName = booStirng();
-booStirngName();
+const booStringName = booString();
+booStringName();
 
-// grandma > mother > daughter
+// Another example
+
+function callMeMayBe() {
+  //const callMe = "Hi! I am now here"; // this line should have poped off the stack when the
+  setTimeout(function () {
+    console.log(callMe); // ..... this was executed here.
+    const callMe = "Hi! I am now here"; // Here also will work, it doesn't matter of where it is defined.
+  }, 4000);
+}
+
+callMeMayBe();
