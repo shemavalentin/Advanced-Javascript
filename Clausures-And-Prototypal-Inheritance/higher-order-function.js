@@ -1,7 +1,7 @@
 //A Higher Order Function (HOF) is a function that either takes a function
 //as an argument or returns another function.
 
-// Now shy higher order are important?  let's look an example
+// Now why higher order are important?  let's look an example
 
 // let's say a function that lets users log in
 
@@ -40,12 +40,11 @@ function letUserlogin(user) {
     // this will take longer to verify
     arr.push(i);
   }
-  return "Access granted to" + user;
+  return "Access granted to " + user;
 }
 letUserlogin("Eva");
 
 //let's refactor this function a little abit
-
 const giveAccessTo = (name) => "access granted to" + name;
 
 function letUserlogin(user) {
@@ -92,13 +91,13 @@ function authentication(verify) {
 }
 
 // let's create a function that play the general function to authenticate users.
-// this function shoud be a higher lervel function that returns or eccept a function as paramenter
+// this function should be a higher level function that returns or accept a function as paramenter
 
 const getAccessToo = (name) => "Access granted to" + name;
 
 function letPerson(person, fn) {
   // here we gain the power to tell it what
-  // what data to use + the function. replace fn to be more descriptive.
+  // data to use + the function. replace fn to be more descriptive.
   if (person.level === "admin") {
     fn(500000);
   } else if (person.level === "user") {
@@ -107,12 +106,10 @@ function letPerson(person, fn) {
 
   return getAccessToo(person.name);
 }
-
 // let's call the function and pass it object and a function
-
 letPerson({ level: "admin", name: "Beni" }, authentication);
 
-// ------------------------------------------------------------------------
+// ----------------------------------------------------------
 // by making thing more general, we can do things like this
 const getAccessTo1 = (name) => "Access granted to" + name;
 
@@ -145,6 +142,18 @@ function letPerson(person, fn) {
 letPerson({ level: "admin", name: "Beni" }, authentication);
 
 // with higher order functions we are able to tell function what to do while invocation
-// we have alotof flexibility.
+// we have a lotof flexibility.
 
 // Our codes are dry now
+
+// ===========  EXERCISE ON HIGHER ORDER FUNCTION ====
+
+const multiplyBy = function (num1) {
+  return function (num2) {
+    return num1 * num2;
+  };
+};
+const multiplyByTwo = multiplyBy(2);
+const multiplyByNine = multiplyBy(9);
+multiplyByTwo(4);
+multiplyByNine(5);
