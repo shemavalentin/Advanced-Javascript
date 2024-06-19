@@ -157,3 +157,16 @@ const multiplyByTwo = multiplyBy(2);
 const multiplyByNine = multiplyBy(9);
 multiplyByTwo(4);
 multiplyByNine(5);
+
+// we can write it with a cleaner way by using arrow keys
+
+const multiply = (num1) => (num2) => num1 * num2;
+
+// const multiplyByThree = multiply(3);
+// multiplyByThree(45)
+
+/* We can even pass that arrow function with parameters as written 
+by only call and the engine will know that it is going to call 
+a function */
+
+multiply(4)(5);
