@@ -7,7 +7,6 @@
 
 (function () { })(); // this is an IIFE. anonymous function and immediately invoked.
 
-
 // What if I make a function declaration like this:
 
 function () { } ();  // this will error out telling that there is a synthax error
