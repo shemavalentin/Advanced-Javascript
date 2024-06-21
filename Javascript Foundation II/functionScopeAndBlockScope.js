@@ -41,10 +41,10 @@ secret; // by using const and let, you con't access the secret because it
 
 /*
 
-You see varibles declared inside a bleck scope like if statements, for loops, 
+You see varibles declared inside a block scope like if statements, for loops, 
 can be accessed from the outside of the opening and closing curly brackets
 when using function scope. It means you can use them from outside in function scope 
-when we use var keyword.
+when we use (var) keyword.
 
 this doesn't mean that you will never use var. there will be the cases you need it.
 
