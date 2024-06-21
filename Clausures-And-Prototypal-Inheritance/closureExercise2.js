@@ -21,3 +21,19 @@ for (let i = 0; i < array.length; i++) {
     console.log("I am at index" + i); // if we need to go with actual values we can do like array1[i]
   }, 3000);
 }
+
+// => Solving this using CLAUSURES
+const array2 = [1, 2, 3, 4];
+for (let i = 0; i < array.length; i++) {
+  // 1. Creating a function IIFE that give me access to i Wrapping the setTimeout within a function
+  // 2. Now pass i to the function in execution phase,
+  // 3. Receiving i in clausure (ClausureI)
+  (function (ClausureI) {
+    setTimeout(function () {
+      console.log("I am at index" + array[ClausureI]); // if we need to go with actual values we can do like array1[i]
+    }, 3000);
+  })(
+    //Executing this function by passing it the i
+    i
+  );
+}
