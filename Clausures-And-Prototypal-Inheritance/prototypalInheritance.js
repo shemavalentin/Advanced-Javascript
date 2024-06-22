@@ -36,3 +36,35 @@ a.__proto__.__proto__;
 const obj1 = {}; // I'm able to create this object because of the base object. it inherits from the base object
 
 obj1.__proto__; //  {__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}
+
+// =========================================================================== //
+
+let dragon = {
+  name: "Tanya",
+  fire: true,
+  fight() {
+    return 5;
+  },
+
+  sing() {
+    return ` I am ${this.name}, the breather of fire`;
+  },
+};
+// dragon.sing();
+// dragon.fight();
+
+// Let's say we add another object, and we needed to borrow a method from dragon objet.
+// how to do this?
+
+let lizard = {
+  name: "Kiki",
+  fight() {
+    return 1;
+  },
+};
+
+// To borrow a method we use bind() method
+const singLizard = dragon.sing.bind(lizard);
+
+// Let's display the result
+console.log(singLizard());
