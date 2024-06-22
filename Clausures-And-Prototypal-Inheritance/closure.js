@@ -15,7 +15,7 @@ a()()();
 // closure inherited all the scopes: grandpa > father > son
 
 /* Here the function a() will be popped off the call stack but the variable grandpa will be 
-put into the memory heap as it is referenced. and because the function a doesn't have any other
+put into the memory heap as it's referenced. and because the function a doesn't have any other
 parameters, in it's environment variable there will be only grandpa.
 
 The sama as to function b and c.
@@ -28,7 +28,7 @@ function a and c are higher order but c is not, it is a normal function
 
 /* If the javascript is running, wait 5 years and finally call closure function (booStirng() after how may years
 even though it will be off stack or the boo() function is off the stack
-it will still remeber for me the string (Thereze) we gave it five yeat ago.
+it will still remeber for me the string (Thereze) we gave it five years ago.
 
 That is because parameters are treated like local variables that get stored in variabel
 environments.
