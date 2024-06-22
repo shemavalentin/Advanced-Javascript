@@ -68,3 +68,64 @@ const singLizard = dragon.sing.bind(lizard);
 
 // Let's display the result
 console.log(singLizard());
+
+// ========= LET'S SAY THE ABOVE OBJECT GETS COMPLICATED ========
+
+let dragone = {
+  name: "Tanya",
+  fire: true,
+  fight() {
+    return 5;
+  },
+
+  sing() {
+    if (this.fire) {
+      return ` I am ${this.name}, the breather of fire`;
+    }
+  },
+};
+
+let lizard1 = {
+  name: "Kiki",
+  fight() {
+    return 1;
+  },
+};
+
+const singLizard1 = dragone.sing.bind(lizard);
+console.log(singLizard1()); // It will result undefined cze the lizard1 doe not have the ability of fire set to true
+// to satisfay the condition in sing method above.
+
+/* What if we need to perhaps inherit a bunch of properties for the lizard as well to make it poweful
+this is where prototypal inhertance comes in. 
+
+What if we create a prototype chain that say, I want object lizard to inherit 
+all properties and methods from dragon?
+
+HOW CAN WE DO THIS?
+*/
+
+// We will do prototype chain like the following
+
+lizard1.__proto__ = dragone;
+lizard1.sing(); // I am Kiki the breather of fire
+lizard1.fire; // true
+lizard1.fight(); // 1
+
+dragone.__proto__; // gives a base object.
+
+/* by using the .__proto__ we are able to inherit through the prototype chain 
+all the method and properties of the dragon and override anything that we've already
+declared in our own object that is name and fight stay with us
+
+but as soon as we say something like sing, Javascript engine is going to say 
+lizard1.sing(), hey lizard, let's sing? and then it's going to look through the
+properties and say hmm I don't see sing here. I'm going to go up the prototype chain
+(because we've created the prorotype chain) and see dragon, do you have sing?
+and if dragon has sing then it's going to run it
+*/
+
+// when I need to check if an object is a prototype of anorther
+
+dragone.isPropertypeOf(lizard1); // true
+lizard1.isPropertypeOf(dragone); // false : It is not dragone inherits lizard1 but lizard1 inheriting dragone.
