@@ -129,3 +129,60 @@ and if dragon has sing then it's going to run it
 
 dragone.isPropertypeOf(lizard1); // true
 lizard1.isPropertypeOf(dragone); // false : It is not dragone inherits lizard1 but lizard1 inheriting dragone.
+
+// ===================== ANOTHER EXERCISE =======================
+
+let dragon3 = {
+  name: "Tanya",
+  fire: true,
+  fight() {
+    return 5;
+  },
+
+  sing() {
+    if (this.fire) {
+      return ` I am ${this.name}, the breather of fire`;
+    }
+  },
+};
+
+let lizard3 = {
+  name: "Kiki",
+  fight() {
+    return 1;
+  },
+};
+
+// Let's create a prototype chain to see how we gain all properties and method from other object
+
+lizard3.__proto__ = dragon3;
+//let's now loop through the lozard3 object to see if it has gained the properties from the parent obj
+for (let prop in lizard3) {
+  //console.log(prop);
+  // Let's here check the properties of lizard3 that it has before it has inherted the dragon3.
+  // we use the method that we get from the base object that is (hasOwnProperty)
+
+  if (lizard3.hasOwnProperty(prop)) {
+    console.log(prop); // lizard3 only has name and fight others have been inheritad from the prototype chain dragon3.
+  }
+}
+
+// The javascript engine looks for you through the prototype chain automatically and finds
+// hasOwnProperty and use it. it does it automatically
+
+/* NOW, WHY PROTOTYPAL INHERITANCE IS USEFUL?
+
+The fact that objects can share  prototypes means that you can have objects with properties
+that are point to the same location in memory thus being more efficient.
+
+Imagine if we a ton of lizards and we just copied all the functionality of the dragon onto the
+lizard into a different place in memory. that can get overwhelming.
+
+instead, with prototypal inheritance we avoided copying all the functionalities into different
+places in memory, we it in just one place.
+
+Anything that inherits from dragon will use sing() method instances, because JS is going to look
+up to the prototype chain, which makes things really interesting. now we are being efficient with
+our codes. we are not repeating ourselves and we are saving ourselves memory.
+
+*/
