@@ -4,7 +4,7 @@
 
 Obj.somefunction(this); // when we do something inside the function, now we have access to the this keyword
 
-// this referes to the object that the function that the function a property of.
+// this referes to the object that the function is a property of.
 
 // In the Developer tool when you type this, it shows you that it refers to windows object.
 
@@ -34,7 +34,8 @@ b(); // the result is: window
 
 function b() {
   "use strict"; // " use restrict" was created to avoid common mistakes in JS
-  // the use strict allows us to not have the this where this referes to the window object.
+  // the use strict allows us to not have the this where this referes to the window object. in the global scope
+  // It actually retricts the global execution context to look in the global context through lexical chain.
   console.log(this);
 }
 b();
@@ -207,7 +208,7 @@ const objec = {
 };
 
 object.sing()(); // here I called the function twice and the returned function is
-// binded to the objec object so that this keyword does not refer to window object
+// binded to the objec object so that (this) keyword does not refer to window object
 // but on the current object. this was used before ES6.
 
 /* OR USING self method. this was used in JQuery and the first version of the Angular */

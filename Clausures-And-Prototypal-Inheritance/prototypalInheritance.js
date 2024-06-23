@@ -186,3 +186,5 @@ up to the prototype chain, which makes things really interesting. now we are bei
 our codes. we are not repeating ourselves and we are saving ourselves memory.
 
 */
+
+// name: is an optional field for a function.
