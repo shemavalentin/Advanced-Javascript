@@ -1,6 +1,6 @@
 /* As said in javascript, everything in JS is object.
 
-for example arrays can get access to the properties and methods of the object in javascript
+for example arrays can get access to the properties and methods of the Object (the parent objects) in javascript
 and same with functions through the chains called prototipal inheritance
 
 Let's see this in codes using the special way in javascript
@@ -25,7 +25,7 @@ function a() {} // an empty object
 a.__proto__; // result: ƒ () { [native code] }. this is a BASE FUNCTION where all function
 // are created from.
 
-/* When we go up again, we get the base object as we've seen on arrays. let's see */
+/* When we go up again, we get the Base Object as we've seen on arrays. let's see */
 
 a.__proto__.__proto__;
 
@@ -93,7 +93,7 @@ let lizard1 = {
 };
 
 const singLizard1 = dragone.sing.bind(lizard);
-console.log(singLizard1()); // It will result undefined cze the lizard1 doe not have the ability of fire set to true
+console.log(singLizard1()); // It will result undefined cze the lizard1 does not have the ability of fire set to true
 // to satisfay the condition in sing method above.
 
 /* What if we need to perhaps inherit a bunch of properties for the lizard as well to make it poweful
@@ -116,7 +116,7 @@ dragone.__proto__; // gives a base object.
 
 /* by using the .__proto__ we are able to inherit through the prototype chain 
 all the method and properties of the dragon and override anything that we've already
-declared in our own object that is name and fight stay with us
+declared in our own object that is name and fight stay with us.
 
 but as soon as we say something like sing, Javascript engine is going to say 
 lizard1.sing(), hey lizard, let's sing? and then it's going to look through the
@@ -153,7 +153,7 @@ let lizard3 = {
   },
 };
 
-// Let's create a prototype chain to see how we gain all properties and method from other object
+// Let's create a prototype chain to see how we gain all properties and a method from other object
 
 lizard3.__proto__ = dragon3;
 //let's now loop through the lozard3 object to see if it has gained the properties from the parent obj

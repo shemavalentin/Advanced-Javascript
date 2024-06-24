@@ -26,11 +26,11 @@ multiplyBy5.__proto__; // produces: ƒ () { [native code] }  <= a native functio
 temp1.name; // numerus method are displayed in browser. just play with it.
 
 /* the multiply function has a property called __proto__ that 
-link links up to the Function object.
+links up to the Function object.
 
 Every function has prototype property that the __proto__ uses to link up to the base Function
-(this one has call(), appy(), bind() methods live). Function also has the prototype where the 
-__proto__ links and it links up to the prototype of the base object. the base object.__proto__ points to NULL
+(this one has call(), appy(), bind() methods live here). Function(With capital letter) also has the prototype where the 
+__proto__ links and it links up to the prototype of the base Object. the base object.__proto__ points to NULL
 */
 
 multiplyBy5__proto__ === Function.prototype; // it is equal because __proto__ in multiplyBy5 points on prototype in Function(parent function)
