@@ -173,7 +173,7 @@ for (let prop in lizard3) {
 /* NOW, WHY PROTOTYPAL INHERITANCE IS USEFUL?
 
 The fact that objects can share  prototypes means that you can have objects with properties
-that are point to the same location in memory thus being more efficient.
+that are pointing to the same location in memory thus being more efficient.
 
 Imagine if we a ton of lizards and we just copied all the functionality of the dragon onto the
 lizard into a different place in memory. that can get overwhelming.
