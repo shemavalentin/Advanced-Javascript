@@ -61,7 +61,7 @@ const elfFuncStore = {
 function createElf(name, weapon) {
   //creating the object linkage
   let newElf = Object.create(elfFuncStore); // Object.create() creates a link btn
-  //console.log(newElf); // empy object created by the Object.create(). we are doing prototypal inher
+  //console.log(newElf); // empty object created by the Object.create(). We are doing prototypal inher
   //console.log(newElf.__proto__); // we get elfFunction object.
 
   // attaching the new object to the property

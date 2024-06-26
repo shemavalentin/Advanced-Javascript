@@ -10,7 +10,6 @@ function Elf(name, weapon) {
 
 const peter1 = new Elf("peter", "stones"); // this will give error, to solve this we
 // need to use new keyword. Constructor function requires new keyword.
-
 console.log(peter.attack());
 const sam1 = new Elf("sam", "fire"); //Elf is a function and every function has prototype property .
 //sam1.name;
@@ -85,3 +84,29 @@ valentin; // {name: 'valentin', weapon: 'fireworks'}
 
 // A Function Constructor or Constructor Function  are simply to allow us to
 // use new keyword and create these objects for us.
+
+// MORE DETAILS ON CONSTRUCTOR FUNCTION
+//====================================
+
+function Elf(name, weapon) {
+  // what if I console.log here? to check what this keyword is here?
+
+  // console.log("this:", this); here first NEW keyword has constructed an empty object with
+  this.name = name;
+  this.weapon = weapon;
+  var a = 5; // if I try and add variable here, it doesn't work.  the only way to add things to
+  // a constructor function is to use the this keyword
+  console.log("this:", this); // Here Object has been already created and it is accessible.
+}
+
+Elf.prototype.attack = function () {
+  return " Attack with " + this.weapon;
+};
+const peter2 = new Elf("peter", "stones");
+
+console.log(peter2.attack());
+//what if I do
+console.log(peter2.prototype); // This is Undefined because Peter2 is not a function/ it doesn't have the prototype on it.
+const sam2 = new Elf("sam", "fire");
+
+console.log(sam2.attack());
