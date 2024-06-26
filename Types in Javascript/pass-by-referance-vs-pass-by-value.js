@@ -11,7 +11,7 @@ b++;
 console.log(a);
 console.log(b);
 
-// what about passong by reference which is done on objects?
+// what about passing by reference which is done on objects?
 
 let obj1 = { name: "Yao", password: "123" };
 //let obj2 = 'address in memory'

@@ -15,7 +15,7 @@ typeof b; // it's type is a number because we didn't use constructor function
 a === b; //false
 a == b; // true, because a got coerced to number
 
-b. // here Javascript will see that you are trying to write an object
+// b. // here Javascript will see that you are trying to write an object
 
 /*
 In JS when we assign a variable, internally JS engine is going to construct
@@ -26,9 +26,9 @@ javascript sees that you want to use object method, so it automatically
 assumes you meant object instead of primitives. it runs constructor internally.
 */
 
-new Date()// this has a built in prototype method so that on these dates we run
+new Date(); // this has a built in prototype method so that on these dates we run
 // different sort of methods
 
 // Technically, everything in javascript is an object becouse everything
-// has a constructor function for it. except (null and undefined) other ones 
+// has a constructor function for it. except (null and undefined) other ones
 // we have methods we can use.
