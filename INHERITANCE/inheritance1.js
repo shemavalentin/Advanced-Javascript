@@ -62,14 +62,48 @@ class Ogre extends Character {
   // may be this one also has a method
   makeFort() {
     return "Strongest fort in the world made";
+
+    // by creating a method here, is like making prototype underneath the hood
+    // but javascript has done this for us as we used classes
+
+    //Ogre.prototype.makeFort;
   }
 }
 
 const fionah = new Elf("Fiona", "Ninja Stars", "house");
 fionah;
-const shrek = new Elf("Shrek", "club", "green");
+const shrek = new Ogre("Shrek", "club", "green");
 shrek;
 
 // Now we can use the same codes over and over in a well organized way
 // by inheriting the base class(Charactor) and add more properties
 // as we want.this is so poweful
+
+// Let's make some test to check the prototype chain
+console.log(Ogre.prototype.isPrototypeOf(shrek)); // true
+console.log(Elf.prototype.isPrototypeOf(fiona)); // true
+console.log(Character.prototype.isPrototypeOf(Ogre)); // False
+console.log(Character.prototype.isPrototypeOf(Ogre.prototype)); // true
+
+// but there an athor cleaner to test this using instance of
+console.log(shrek instanceof Ogre); // true
+console.log(fionah instanceof Ogre); // false
+console.log(Elf instanceof Ogre); // false
+console.log(fionah instanceof Elf); // true
+console.log(fionah instanceof Character); // true  because it extends all the way from the character
+
+// What is an instance: instance is when we use the new keyword and create
+// a version of a class.
+
+// INHERITANCE: Is inherting something from the higher class. and we use extends keyword.
+/* In javaScript inhertance is not copying the functionality. It doesn't simply 
+copy what we have in the inherted class(parent class).
+
+instead, it links up the prototype chain. so we are not creating copies 
+and making things inefficient.
+
+So it is creating this efficient linking in javascript using prototypal inhertance.
+
+and remember that javascript is all about objects. it is objects inherting from
+objects. that's it. there are no technical classes.
+ */
