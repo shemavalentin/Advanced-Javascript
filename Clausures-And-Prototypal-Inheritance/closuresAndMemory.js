@@ -20,7 +20,7 @@ heavyDuty();
 // the above example may be silly but let's say we need access the by the index
 
 function heavyDuty(index) {
-  // using a nice way to create a big a big array
+  // using a nice way to create a big array
   const bigArray = new Array(7000).fill("😄");
   console.log("Created!");
   return bigArray[index];
@@ -39,7 +39,7 @@ our memory which we have limited memory.
 we are creating it everytime. every time we run this function, we create that
 memory that hold that array and then we return it. And because nothing is referencing it
 it get destroyed. this doesn't sound very efficient. Would it be great if there was
-a way fir us to create this array. and becuse we know it is going to be used alot
+a way for us to create this array. and because we know it is going to be used alot
 to only create it once and just have it in memory therefore we can access it instead 
 of doing all that work.how can we do that with closures.
 */

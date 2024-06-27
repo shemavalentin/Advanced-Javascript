@@ -9,9 +9,9 @@ const makeNuclearBomb = () => {
     return "🔆";
   };
 
-  // to make this working we need a function to setTimeout
+  // to make this work we need a function to setTimeout
   // and it is going to keep on running
-  // run pasaTime by encreamenting the timeWithoutDestruction
+  // run passaTime by encreamenting the timeWithoutDestruction
 
   setInterval(passTime, 1000);
 
@@ -29,7 +29,7 @@ ohno.totalPeaceTime();
 /* Now what is encapsulation: encapsulation is hiding of information 
 that is unnecessary to be seen by the outside world or manupulated.
 
-this gets into the idea of principle of least of provileges. a big security 
+this gets into the idea of principle of least provileges. a big security 
 principle when it comes to programming where you don't just want to give 
 any body access to your API, to special function or variables.
 */
