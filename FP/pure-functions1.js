@@ -45,3 +45,6 @@ mutateArray1(array); // [1,2,1,1]
 console.log(array);
 
 // The order for function calls matter. and this can cause buggs
+// as long as we are accesing the same global state.
+
+// Now, how can we write something that has no side effects.?
