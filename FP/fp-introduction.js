@@ -29,4 +29,7 @@ programming are immutable(Once something is created, it can not change),
 we avoid things like shared state, and we adhere to the principal of
 pure function.
 
+Functional programming has a lot of restraints, rules to not give 
+permission to everyone so that codes are not out of our hands.
+
 */
