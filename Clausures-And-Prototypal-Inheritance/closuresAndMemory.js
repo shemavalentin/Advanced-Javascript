@@ -17,7 +17,7 @@ function heavyDuty() {
 
 heavyDuty();
 
-// the above example may be silly but let's say we need access the by the index
+// the above example may be silly but let's say we need access array by index
 
 function heavyDuty(index) {
   // using a nice way to create a big array

@@ -18,7 +18,7 @@ a()()();
 put into the memory heap as it's referenced. and because the function a doesn't have any other
 parameters, in it's environment variable there will be only grandpa.
 
-The sama as to function b and c.
+The same as to function b and c.
 
 
 function a and c are higher order but c is not, it is a normal function
@@ -26,9 +26,9 @@ function a and c are higher order but c is not, it is a normal function
 * parameters are treated like local variables that get get store in environment variable
 */
 
-/* If the javascript is running, wait 5 years and finally call closure function (booStirng() after how may years
+/* If javascript is running, wait 5 years and finally call closure function (booStirng() after how may years
 even though it will be off stack or the boo() function is off the stack
-it will still remeber for me the string (Thereze) we gave it five years ago.
+it will still remeber for me the string (Therese) we gave it five years ago.
 
 That is because parameters are treated like local variables that get stored in variabel
 environments.

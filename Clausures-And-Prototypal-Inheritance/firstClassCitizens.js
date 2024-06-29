@@ -14,7 +14,7 @@ a(function () {
   console.log("hi there");
 });
 
-// 3. We can return a function as valuess
+// 3. We can return a function as a value
 
 function b() {
   return function c() {
