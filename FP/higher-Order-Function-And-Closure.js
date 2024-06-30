@@ -46,7 +46,7 @@ increamentFn(); // here we will see the result.
 
 /* IMPORTANT:
 
-1.  In clausere and by this example, we are modifying state outside of our function.
+1.  In clausure and by this example, we are modifying state outside of our function.
 that increament function is touching state or data that belong to another 
 function(the clausure function).
 
@@ -56,7 +56,6 @@ very careful that clausures only make a function impure if we modified the
 closed over variable.
 
 */
-
 const clausures = function () {
   let count = 55;
   return function getCounter() {
@@ -77,7 +76,7 @@ but as long as we don't modify it and mutate the data,we are still following
 the functional programming paradigm.
 
 The beauty of this is that we created private variables.
-we are able to use clauses to create data privacy which is vey cool.
+we are able to use clausures to create data privacy which is vey cool.
 
 As a user(calling getCounter() the inner function), I can't modify the count variable
 may be this count is super important that we don't want to touch it.
