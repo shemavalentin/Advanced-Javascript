@@ -4,7 +4,7 @@ const multiply = (a) => (b) => (c) => a * b * c;
 // The partial application says that: take the first function and apply the other
 // rest of the arguments so that it means on the second call, I expect all the arguments.
 
-multiple(3)(4)(10); // this is not partial application
+multiply(3)(4)(10); // this is not partial application
 
 // we can do this:
 const partialMultipleBy5 = multiply(null, 5); // the first function passed null

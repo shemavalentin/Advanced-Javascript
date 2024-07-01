@@ -68,4 +68,11 @@ pipe(fn3, fn2, fn1)(50); // Here pipe is going to grab 50 and apply fn3 just lik
 /* WHETHER COMPOSE OR PIPE ARE USED INTERCHANGIBLY AND YOU CAN USE WHATEVER
 YOU WANT ACCORDING TO YOUR READABILITY. 
 
+Composition a good tool to use, to keep in mind when creating software
+because this is going to help us create code that is more stable as well as
+easier to change in the future.
+
+This does not mean Inheritance is not important. it is used and there are 
+solutions it provides. but most programmers prefer function composition.
+
 */

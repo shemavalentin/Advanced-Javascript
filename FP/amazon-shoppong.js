@@ -35,7 +35,7 @@ purchaseItem(
 
 // Let's create purchaseItem function
 function purchaseItem(...fns) {
-  return fns.reduce(compose);
+  return fns.reduce(compose); // here use pipe when you are using pipe.s
 }
 
 function addItemToCart(user, item) {
@@ -92,3 +92,8 @@ function getUserState() {}
 // may be amazon can create a function to go back in history or forward
 // this also after it is created it is composed with others , no other hussles.
 function goBack() {}
+
+// REVIEW
+
+// At the end of the day, a function without a return statement, that's just
+// a procedure.
