@@ -28,3 +28,23 @@ module.exports = {
 // bundle them up in a single file.
 
 // Then we funally have the benefit of, no global namespace pollution and order does't matter any more.
+
+//=========== WHAT ABOUT AMD? ============
+
+define(["module1", "module2"], function (module1Import, module2Import) {
+  var module1 = module1Import; // .fight
+  var module2 = module2Import; // .importedFunc2
+
+  function dance() {}
+
+  return {
+    dance: dance,
+  };
+});
+
+// AMD was designed specifically for the browsers. This means, it loads scripts
+// or modules asynchronously. and this is crucial for browesers.
+// Once you want to distribute a package to npm you nees to write one for
+// comminjs communitu and another for AMD community.
+
+//later on peaple came up with UMD => UNIVESRSAL MODULE DEFINITION
