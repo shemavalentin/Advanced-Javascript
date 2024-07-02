@@ -2,7 +2,7 @@
 
 /*  Imperative code is  code that tells the machine what to do and how to do it.
 
-Declarative code is code that tell the machine what to do and what should happen.
+Declarative code is code that tells the machine what to do and what should happen.
 It doen't tell the computer how to do things.
 
 Let's think it this way.  => a computer is better at being imperative. means it 
