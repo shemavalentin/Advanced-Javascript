@@ -17,6 +17,8 @@ async function() {
 
 (async function() {
     try {
+        //await Promise.resolve('Oopsie') 
+        await Promise.reject('Oopsie') // if it is rejected here we go to catch()
         await Promise.reject('Oopsie')
     } catch (err) {
         console.log(err)
@@ -25,4 +27,5 @@ async function() {
 })
 
 // now we are able to handle errors in asynchronous as if we are using
-// synchronous by using try and catch.
+// synchronous by using try and catch wether to use .catch().
+// this has made easy to handle async codes as sync
