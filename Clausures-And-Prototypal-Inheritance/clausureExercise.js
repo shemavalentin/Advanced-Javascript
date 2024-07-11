@@ -38,7 +38,7 @@ initalize();
 console.log(view);
 console.log("View has been set");
 
-/// ============= or do  it by closure as  here =============================
+/// ============= or do it by closure as here =============================
 
 let view1;
 function initialize() {

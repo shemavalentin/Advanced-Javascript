@@ -18,7 +18,7 @@ function notGood(num) {
   // it will give the same result.
   // it console logs 5 from the outside the world. it is idempotent(multiple calls
   // is going to give same result) even though it is not pure because it is communicating
-  // with outside the world.
+  // with outside world.
 }
 notGood(5);
 
