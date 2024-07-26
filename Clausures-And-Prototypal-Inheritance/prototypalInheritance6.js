@@ -9,7 +9,6 @@ function multiplyBy5(num) {
 }
 
 // when we do:
-
 multiplyBy5.prototype; // we get constructor Function (multiplyBy5.__proto__;) => ƒ () { [native code] }
 // equal to
 Function.prototype; // ƒ () { [native code] }
@@ -37,7 +36,6 @@ typeof Object; // "function"  => because every function has the prototype proper
 const obj = {}; // underneath the hood, the JS engine creats this object using the Object construtor(Object)
 
 // let's prove
-
 typeof {}; // ans: object
 typeof Object.prototype; // ans: object
 
